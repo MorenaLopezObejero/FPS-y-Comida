@@ -23,10 +23,10 @@ public class ScriptInteractionArea : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        FileteScript filete;
-        filete = other.GetComponent<FileteScript>();
+        PickUpScript objeto;
+        objeto = other.GetComponent<PickUpScript>();
 
-        if (filete)
+        if (objeto)
         {
             Destroy(other.gameObject);
             Debug.Log("Hubo interaccion");
