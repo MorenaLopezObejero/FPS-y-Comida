@@ -13,6 +13,23 @@ public class ScriptInteractionArea : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+     
         
+
+    }
+    void Alimentarse(int ValorAlimentario)
+    {
+
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        FileteScript filete;
+        filete = other.GetComponent<FileteScript>();
+
+        if (filete)
+        {
+            Destroy(other.gameObject);
+            Debug.Log("Hubo interaccion");
+        }
     }
 }
